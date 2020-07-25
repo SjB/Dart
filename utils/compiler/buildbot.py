@@ -224,7 +224,7 @@ def CleanUpTemporaryFiles(system, browser):
   """For some browser (selenium) tests, the browser creates a temporary profile
   on each browser session start. On Windows, generally these files are
   automatically deleted when all python processes complete. However, since our
-  buildbot slave script also runs on python, we never get the opportunity to
+  buildbot subordinate script also runs on python, we never get the opportunity to
   clear out the temp files, so we do so explicitly here. Our batch browser
   testing will make this problem occur much less frequently, but will still
   happen eventually unless we do this.

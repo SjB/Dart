@@ -69,10 +69,10 @@ class TestGsutil(unittest.TestCase):
     else:
       #should be running on the build server
       if self._iswindows:
-        gsutilexe = 'e:\\b\\build\\scripts\\slave\\gsutil'
+        gsutilexe = 'e:\\b\\build\\scripts\\subordinate\\gsutil'
         self.assertTrue(self._gsu._useshell)
       else:
-        gsutilexe = '/b/build/scripts/slave/gsutil'
+        gsutilexe = '/b/build/scripts/subordinate/gsutil'
         self.assertFalse(self._gsu._useshell)
       self.assertEqual(gsutilexe, self._gsu._gsutil)
       self.assertFalse(self._gsu._dryrun)

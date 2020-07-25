@@ -50,13 +50,13 @@ class GsUtil(object):
     Raises:
       Exception: gsutil is not found
     """
-    bot_gs_util = '/b/build/scripts/slave/gsutil'
+    bot_gs_util = '/b/build/scripts/subordinate/gsutil'
     operating_system = platform.system()
     if operating_system == 'Windows' or operating_system == 'Microsoft':
     # On Windows Vista platform.system() can return "Microsoft" with some
     # versions of Python, see http://bugs.python.org/issue1082 for details.
       # TODO(devoncarew): remove this hardcoded e:\ path
-      bot_gs_util = 'e:\\b\\build\\scripts\\slave\\gsutil'
+      bot_gs_util = 'e:\\b\\build\\scripts\\subordinate\\gsutil'
       self._useshell = True
     if gsutil_loc is None:
       home_gs_util = os.path.join(os.path.expanduser('~'), 'gsutil', 'gsutil')
