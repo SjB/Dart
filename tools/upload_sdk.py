@@ -16,10 +16,10 @@ import sys
 import utils
 
 
-GSUTIL = '/b/build/scripts/slave/gsutil'
+GSUTIL = '/b/build/scripts/subordinate/gsutil'
 HAS_SHELL = False
 if platform.system() == 'Windows':
-  GSUTIL = 'e:\\\\b\\build\\scripts\\slave\\gsutil'
+  GSUTIL = 'e:\\\\b\\build\\scripts\\subordinate\\gsutil'
   HAS_SHELL = True
 GS_SITE = 'gs://'
 GS_DIR = 'dart-dump-render-tree'
